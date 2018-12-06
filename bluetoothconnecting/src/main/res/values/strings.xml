@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bluetooth_connecting_path_dot_left_rounded">M 6 13 C 6.55 12.45 6.55 11.56 6 11.01 L 6 11 C 5.45 10.45 4.55 10.45 4 11 C 3.45 11.55 3.45 12.45 4 13 C 4.55 13.55 5.45 13.55 6 13 Z</string>
+    <string name="bluetooth_connecting_path_dot_right_rounded">M 20 11 C 19.44 10.44 18.55 10.44 18 10.99 L 18 11 C 17.45 11.55 17.45 12.44 18 12.99 L 18 13 C 18.55 13.55 19.44 13.55 19.99 13 L 20 13 C 20.55 12.45 20.55 11.55 20 11 Z</string>
+
+    <string name="bluetooth_connecting_path_dot_left_sharp">M 7,12 5,10 3,12 5,14 Z</string>
+    <string name="bluetooth_connecting_path_dot_right_sharp">m 19,10 -2,2 2,2 2,-2 z</string>
+</resources>

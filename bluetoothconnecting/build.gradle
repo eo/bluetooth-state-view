@@ -26,6 +26,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation project(':bluetoothicon')
+
     implementation deps.appcompat
 
     testImplementation deps.junit
