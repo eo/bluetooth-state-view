@@ -1,4 +1,6 @@
 # Bluetooth State View
+![Icon](/sample/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
+
 Material design animated Bluetooth state view for Android
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://github.com/eo/battery-meter-view/blob/master/LICENSE)
