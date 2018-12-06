@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.V23.Theme.BluetoothState" parent="Base.Theme.BluetoothState">
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.BluetoothState" parent="Base.V23.Theme.BluetoothState" />
+</resources>
