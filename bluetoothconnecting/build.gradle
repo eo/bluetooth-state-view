@@ -1,14 +1,9 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion config.compileSdk
 
     defaultConfig {
-        applicationId "eo.view.bluetoothstate.sample"
-
         minSdkVersion config.minSdk
         targetSdkVersion config.targetSdk
 
@@ -22,7 +17,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -31,11 +26,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation deps.kotlinStdLib
     implementation deps.appcompat
-    implementation deps.material
-    implementation deps.constraintlayout
-    implementation deps.ktx
 
     testImplementation deps.junit
     androidTestImplementation deps.atsl
