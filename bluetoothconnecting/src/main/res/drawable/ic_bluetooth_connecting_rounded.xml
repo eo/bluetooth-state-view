@@ -1,0 +1,13 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_bluetooth_connected_rounded" >
+
+    <target
+        android:name="dot_left"
+        android:animation="@anim/bluetooth_connecting_dot_left" />
+
+    <target
+        android:name="dot_right"
+        android:animation="@anim/bluetooth_connecting_dot_right" />
+
+</animated-vector>
