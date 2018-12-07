@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primary">#FFFFFFFF</color>
-    <color name="accent">#303F9F</color>
+    <color name="accent">#3c6ed4</color>
     <color name="navigation_bar_divider">#E0E0E0</color>
 
     <color name="launcher_background">@color/accent</color>
