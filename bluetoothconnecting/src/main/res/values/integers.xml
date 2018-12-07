@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <integer name="bluetooth_connecting_dot_alpha_transition_duration">16</integer>
+    <integer name="bluetooth_connecting_dot_alpha_transition_interval">233</integer>
+
+    <item name="bluetooth_connecting_dot_alpha_min" type="integer" format="float">0.5</item>
+    <item name="bluetooth_connecting_dot_alpha_max" type="integer" format="float">1</item>
+
+</resources>
