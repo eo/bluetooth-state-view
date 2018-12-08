@@ -6,31 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/connectingImageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.3"
-        app:layout_constraintBottom_toTopOf="@id/parentVerticalCenterGuideline"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/parentVerticalCenterGuideline"
+        android:id="@+id/heightPercent50Guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintGuide_percent="0.5"
         android:orientation="horizontal"/>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/widthPercent50Guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"/>
+
     <ImageView
-        android:id="@+id/searchingImageView"
+        android:id="@+id/roundedConnectingImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintBottom_toTopOf="@id/heightPercent50Guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/sharpConnectingImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintBottom_toTopOf="@id/heightPercent50Guideline"
+        app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/roundedSearchingImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintWidth_percent="0.4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/parentVerticalCenterGuideline"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
+        app:layout_constraintTop_toBottomOf="@id/heightPercent50Guideline"/>
+
+    <ImageView
+        android:id="@+id/sharpSearchingImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightPercent50Guideline"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
