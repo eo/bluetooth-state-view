@@ -1,6 +1,5 @@
-<animated-vector
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/ic_bluetooth_connected_sharp" >
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_bluetooth_connected_sharp">
 
     <target
         android:name="dot_left"
