@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="bluetooth_searching_icon_translation_x">-2</integer>
+
+    <integer name="bluetooth_searching_first_level_appear_start_offset">300</integer>
+    <integer name="bluetooth_searching_first_level_appear_duration">150</integer>
+    <integer name="bluetooth_searching_second_level_appear_start_offset">570</integer>
+    <integer name="bluetooth_searching_second_level_appear_duration">150</integer>
+    <integer name="bluetooth_searching_second_level_disappear_start_offset">480</integer>
+    <integer name="bluetooth_searching_second_level_disappear_duration">150</integer>
+    <integer name="bluetooth_searching_first_level_disappear_start_offset">900</integer>
+    <integer name="bluetooth_searching_first_level_disappear_duration">150</integer>
+
+    <item name="bluetooth_searching_level_alpha_min" format="float" type="integer">0</item>
+    <item name="bluetooth_searching_level_alpha_max" format="float" type="integer">1</item>
 </resources>

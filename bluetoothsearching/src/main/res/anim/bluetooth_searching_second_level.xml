@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially">
+
+    <objectAnimator
+        android:duration="0"
+        android:propertyName="fillAlpha"
+        android:valueFrom="0"
+        android:valueTo="0"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:duration="@integer/bluetooth_searching_second_level_appear_duration"
+        android:interpolator="@android:interpolator/linear"
+        android:propertyName="fillAlpha"
+        android:startOffset="@integer/bluetooth_searching_second_level_appear_start_offset"
+        android:valueFrom="@integer/bluetooth_searching_level_alpha_min"
+        android:valueTo="@integer/bluetooth_searching_level_alpha_max"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:duration="@integer/bluetooth_searching_second_level_disappear_duration"
+        android:interpolator="@android:interpolator/linear"
+        android:propertyName="fillAlpha"
+        android:startOffset="@integer/bluetooth_searching_second_level_disappear_start_offset"
+        android:valueFrom="@integer/bluetooth_searching_level_alpha_max"
+        android:valueTo="@integer/bluetooth_searching_level_alpha_min"
+        android:valueType="floatType" />
+</set>

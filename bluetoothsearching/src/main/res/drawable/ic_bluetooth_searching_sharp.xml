@@ -1,0 +1,12 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_bluetooth_search_sharp">
+
+    <target
+        android:name="first_level"
+        android:animation="@anim/bluetooth_searching_first_level" />
+
+    <target
+        android:name="second_level"
+        android:animation="@anim/bluetooth_searching_second_level" />
+
+</animated-vector>
