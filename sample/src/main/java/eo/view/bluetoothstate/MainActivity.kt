@@ -22,24 +22,24 @@ class MainActivity : AppCompatActivity() {
     private fun setupConnectingAnimations() {
         setInfiniteAnimatedVectorDrawable(
             roundedConnectingImageView,
-            R.drawable.ic_bluetooth_connecting_rounded
+            R.drawable.avd_bluetooth_connecting_rounded
         )
 
         setInfiniteAnimatedVectorDrawable(
             sharpConnectingImageView,
-            R.drawable.ic_bluetooth_connecting_sharp
+            R.drawable.avd_bluetooth_connecting_sharp
         )
     }
 
     private fun setupSearchingAnimations() {
         setInfiniteAnimatedVectorDrawable(
             roundedSearchingImageView,
-            R.drawable.ic_bluetooth_searching_rounded
+            R.drawable.avd_bluetooth_searching_rounded
         )
 
         setInfiniteAnimatedVectorDrawable(
             sharpSearchingImageView,
-            R.drawable.ic_bluetooth_searching_sharp
+            R.drawable.avd_bluetooth_searching_sharp
         )
     }
 
