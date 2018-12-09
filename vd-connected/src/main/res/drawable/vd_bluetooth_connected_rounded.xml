@@ -13,7 +13,7 @@
     <path
         android:name="bluetooth_icon"
         android:fillColor="#FF000000"
-        android:pathData="@string/bluetooth_icon_path_rounded" />
+        android:pathData="@string/bluetooth_path_rounded" />
 
     <path
         android:name="dot_right"
