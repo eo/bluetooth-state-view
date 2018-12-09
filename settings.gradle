@@ -1,4 +1,4 @@
 include ':sample'
-include ':bluetoothicon'
-include ':bluetoothconnecting'
-include ':bluetoothsearching'
+include ':vd-bluetooth'
+include ':avd-connecting'
+include ':avd-searching'

@@ -7,61 +7,117 @@
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/heightPercent50Guideline"
+        android:id="@+id/heightPercent10Guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="horizontal"/>
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/heightPercent40Guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/heightPercent70Guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/widthPercent50Guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="vertical"/>
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/theme_rounded"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintBottom_toTopOf="@id/heightPercent10Guideline"
+        app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/theme_sharp"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintBottom_toTopOf="@id/heightPercent10Guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/roundedConnectingImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.4"
-        app:layout_constraintWidth_percent="0.4"
-        app:layout_constraintBottom_toTopOf="@id/heightPercent50Guideline"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/heightPercent40Guideline"
         app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightPercent10Guideline"
+        app:layout_constraintWidth_percent="0.4" />
 
     <ImageView
         android:id="@+id/sharpConnectingImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.4"
-        app:layout_constraintWidth_percent="0.4"
-        app:layout_constraintBottom_toTopOf="@id/heightPercent50Guideline"
-        app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
+        app:layout_constraintBottom_toTopOf="@id/heightPercent40Guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
+        app:layout_constraintTop_toBottomOf="@id/heightPercent10Guideline"
+        app:layout_constraintWidth_percent="0.4" />
 
     <ImageView
         android:id="@+id/roundedSearchingImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.4"
-        app:layout_constraintWidth_percent="0.4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/heightPercent70Guideline"
         app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
-        app:layout_constraintTop_toBottomOf="@id/heightPercent50Guideline"/>
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightPercent40Guideline"
+        app:layout_constraintWidth_percent="0.4" />
 
     <ImageView
         android:id="@+id/sharpSearchingImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.4"
-        app:layout_constraintWidth_percent="0.4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
+        app:layout_constraintBottom_toTopOf="@id/heightPercent70Guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/heightPercent50Guideline"/>
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
+        app:layout_constraintTop_toBottomOf="@id/heightPercent40Guideline"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <ImageView
+        android:id="@+id/roundedTurningOnOffImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightPercent70Guideline"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <ImageView
+        android:id="@+id/sharpTurningOnOffImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
+        app:layout_constraintTop_toBottomOf="@id/heightPercent70Guideline"
+        app:layout_constraintWidth_percent="0.4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,8 +31,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':bluetoothconnecting')
-    implementation project(':bluetoothsearching')
+    implementation project(':avd-connecting')
+    implementation project(':avd-searching')
 
     implementation deps.kotlinStdLib
     implementation deps.appcompat

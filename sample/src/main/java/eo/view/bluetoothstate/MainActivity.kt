@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         setupConnectingAnimations()
         setupSearchingAnimations()
+        setupTurningOnOffAnimations()
     }
 
     private fun setupConnectingAnimations() {
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
             sharpSearchingImageView,
             R.drawable.avd_bluetooth_searching_sharp
         )
+    }
+
+    private fun setupTurningOnOffAnimations() {
+        
     }
 
     private fun setInfiniteAnimatedVectorDrawable(
