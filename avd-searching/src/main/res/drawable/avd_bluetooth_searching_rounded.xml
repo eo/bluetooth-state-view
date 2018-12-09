@@ -2,11 +2,11 @@
     android:drawable="@drawable/vd_bluetooth_search_rounded">
 
     <target
-        android:name="first_level"
-        android:animation="@anim/bluetooth_searching_first_level" />
+        android:name="level_1"
+        android:animation="@anim/bluetooth_searching_level_1" />
 
     <target
-        android:name="second_level"
-        android:animation="@anim/bluetooth_searching_second_level" />
+        android:name="level_2"
+        android:animation="@anim/bluetooth_searching_level_2" />
 
 </animated-vector>

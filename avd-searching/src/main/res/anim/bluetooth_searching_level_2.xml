@@ -10,21 +10,20 @@
         android:valueType="floatType" />
 
     <objectAnimator
-        android:duration="@integer/bluetooth_searching_first_level_appear_duration"
+        android:duration="@integer/bluetooth_searching_level_2_appear_duration"
         android:interpolator="@android:interpolator/linear"
         android:propertyName="fillAlpha"
-        android:startOffset="@integer/bluetooth_searching_first_level_appear_start_offset"
+        android:startOffset="@integer/bluetooth_searching_level_2_appear_start_offset"
         android:valueFrom="@integer/bluetooth_searching_level_alpha_min"
         android:valueTo="@integer/bluetooth_searching_level_alpha_max"
         android:valueType="floatType" />
 
     <objectAnimator
-        android:duration="@integer/bluetooth_searching_first_level_disappear_duration"
+        android:duration="@integer/bluetooth_searching_level_2_disappear_duration"
         android:interpolator="@android:interpolator/linear"
         android:propertyName="fillAlpha"
-        android:startOffset="@integer/bluetooth_searching_first_level_disappear_start_offset"
+        android:startOffset="@integer/bluetooth_searching_level_2_disappear_start_offset"
         android:valueFrom="@integer/bluetooth_searching_level_alpha_max"
         android:valueTo="@integer/bluetooth_searching_level_alpha_min"
         android:valueType="floatType" />
-
 </set>

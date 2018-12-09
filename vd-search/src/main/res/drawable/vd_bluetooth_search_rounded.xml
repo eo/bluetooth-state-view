@@ -13,13 +13,13 @@
     </group>
 
     <path
-        android:name="first_level"
+        android:name="level_1"
         android:fillColor="#FF000000"
-        android:pathData="@string/bluetooth_search_path_first_level_rounded" />
+        android:pathData="@string/bluetooth_search_path_level_1_rounded" />
 
     <path
-        android:name="second_level"
+        android:name="level_2"
         android:fillColor="#FF000000"
-        android:pathData="@string/bluetooth_search_path_second_level_rounded" />
+        android:pathData="@string/bluetooth_search_path_level_2_rounded" />
 
 </vector>
