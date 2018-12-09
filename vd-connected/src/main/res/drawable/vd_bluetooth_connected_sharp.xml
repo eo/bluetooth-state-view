@@ -8,7 +8,7 @@
     <path
         android:name="dot_left"
         android:fillColor="#FF000000"
-        android:pathData="@string/bluetooth_connecting_path_dot_left_sharp" />
+        android:pathData="@string/bluetooth_connected_path_dot_left_sharp" />
 
     <path
         android:name="bluetooth_icon"
@@ -18,6 +18,6 @@
     <path
         android:name="dot_right"
         android:fillColor="#FF000000"
-        android:pathData="@string/bluetooth_connecting_path_dot_right_sharp" />
+        android:pathData="@string/bluetooth_connected_path_dot_right_sharp" />
 
 </vector>
