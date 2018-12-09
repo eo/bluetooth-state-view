@@ -5,21 +5,21 @@
     android:viewportWidth="24.0"
     android:viewportHeight="24.0">
 
-    <group android:translateX="@integer/bluetooth_searching_icon_translation_x">
+    <group android:translateX="@integer/bluetooth_search_icon_translation_x">
         <path
             android:name="bluetooth_icon"
             android:fillColor="#FF000000"
-            android:pathData="@string/bluetooth_icon_path_sharp" />
+            android:pathData="@string/bluetooth_icon_path_rounded" />
     </group>
 
     <path
         android:name="first_level"
         android:fillColor="#FF000000"
-        android:pathData="@string/bluetooth_searching_path_first_level_sharp" />
+        android:pathData="@string/bluetooth_search_path_first_level_rounded" />
 
     <path
         android:name="second_level"
         android:fillColor="#FF000000"
-        android:pathData="@string/bluetooth_searching_path_second_level_sharp" />
+        android:pathData="@string/bluetooth_search_path_second_level_rounded" />
 
 </vector>

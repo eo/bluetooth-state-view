@@ -1,5 +1,6 @@
 include ':sample'
 include ':vd-bluetooth'
 include ':vd-connected'
+include ':vd-search'
 include ':avd-connecting'
 include ':avd-searching'
