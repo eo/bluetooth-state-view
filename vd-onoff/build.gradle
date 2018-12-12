@@ -26,8 +26,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':vd-bluetooth')
-
     implementation deps.appcompat
 
     testImplementation deps.junit

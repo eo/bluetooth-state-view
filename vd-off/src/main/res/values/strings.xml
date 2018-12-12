@@ -1,7 +1,0 @@
-<resources>
-    <string name="bluetooth_off_path_strike_through_rounded">M 19.29,17.89 6.11,4.7 C 5.72,4.31 5.09,4.31 4.7,4.7 4.31,5.09 4.31,5.72 4.7,6.11 L 17.89,19.3 c 0.39,0.39 1.02,0.39 1.41,0 0.38,-0.39 0.38,-1.03 -0.01,-1.41 z</string>
-    <string name="bluetooth_off_path_strike_through_sharp">M 5.41,4 4,5.41 18.59,20 20,18.59 Z</string>
-
-    <string name="bluetooth_off_clip_path_state_on">M 6.69,2.72 4,5.41 v 0 L 6.69,2.72 Z M 0,0 H 24 V 24 H 0 Z</string>
-    <string name="bluetooth_off_clip_path_state_off">M 6.69,2.72 4,5.41 18.59,20 21.28,17.31 Z M 0,0 H 24 V 24 H 0 Z</string>
-</resources>
