@@ -12,6 +12,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private var isBluetoothEnabled = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -46,21 +48,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupTurningOnOffAnimations() {
-        val delayBetweenOnOffStates = 500L
-
-        setTwoStatesInfiniteAnimatedVectorDrawable(
-            roundedTurningOnOffImageView,
-            R.drawable.avd_bluetooth_turning_off_rounded,
-            R.drawable.avd_bluetooth_turning_on_rounded,
-            delayBetweenOnOffStates
-        )
-
-        setTwoStatesInfiniteAnimatedVectorDrawable(
-            sharpTurningOnOffImageView,
-            R.drawable.avd_bluetooth_turning_off_sharp,
-            R.drawable.avd_bluetooth_turning_on_sharp,
-            delayBetweenOnOffStates
-        )
+        roundedTurningOnOffImageView.setOnClickListener { toggleBluetoothState() }
+        sharpTurningOnOffImageView.setOnClickListener { toggleBluetoothState() }
     }
 
     private fun setInfiniteAnimatedVectorDrawable(
@@ -78,35 +67,11 @@ class MainActivity : AppCompatActivity() {
         avd?.start()
     }
 
-    private fun setTwoStatesInfiniteAnimatedVectorDrawable(
-        imageView: ImageView,
-        @DrawableRes avdResource1: Int,
-        @DrawableRes avdResource2: Int,
-        delayBetweenStates: Long
-    ) {
-        val avd1 = AnimatedVectorDrawableCompat.create(this, avdResource1)
-        val avd2 = AnimatedVectorDrawableCompat.create(this, avdResource2)
+    private fun toggleBluetoothState() {
+        isBluetoothEnabled = !isBluetoothEnabled
+        val state = intArrayOf(android.R.attr.state_checked * if (isBluetoothEnabled) 1 else -1)
 
-        imageView.setImageDrawable(avd1)
-
-        avd1?.registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
-            override fun onAnimationEnd(drawable: Drawable?) {
-                imageView.postDelayed({
-                    imageView.setImageDrawable(avd2)
-                    avd2?.start()
-                }, delayBetweenStates)
-            }
-        })
-
-        avd2?.registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
-            override fun onAnimationEnd(drawable: Drawable?) {
-                imageView.postDelayed({
-                    imageView.setImageDrawable(avd1)
-                    avd1?.start()
-                }, delayBetweenStates)
-            }
-        })
-
-        avd1?.start()
+        roundedTurningOnOffImageView.setImageState(state, true)
+        sharpTurningOnOffImageView.setImageState(state, true)
     }
 }

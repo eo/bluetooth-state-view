@@ -102,22 +102,31 @@
         android:id="@+id/roundedTurningOnOffImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/heightPercent70Guideline"
-        app:layout_constraintWidth_percent="0.4" />
+        app:layout_constraintWidth_percent="0.4"
+        app:srcCompat="@drawable/asl_bluetooth_on_off_rounded" />
 
     <ImageView
         android:id="@+id/sharpTurningOnOffImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
         app:layout_constraintTop_toBottomOf="@id/heightPercent70Guideline"
-        app:layout_constraintWidth_percent="0.4" />
+        app:layout_constraintWidth_percent="0.4"
+        app:srcCompat="@drawable/asl_bluetooth_on_off_sharp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
