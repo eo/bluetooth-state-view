@@ -33,6 +33,7 @@ dependencies {
 
     implementation project(':avd-connecting')
     implementation project(':avd-searching')
+    implementation project(':avd-turningonoff')
 
     implementation deps.kotlinStdLib
     implementation deps.appcompat

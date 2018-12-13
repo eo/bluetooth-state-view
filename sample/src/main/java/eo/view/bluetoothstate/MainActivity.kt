@@ -9,6 +9,7 @@ import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +46,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupTurningOnOffAnimations() {
-        
+        setTwoStatesInfiniteAnimatedVectorDrawable(
+            sharpTurningOnOffImageView,
+            R.drawable.avd_bluetooth_turning_off_sharp,
+            R.drawable.avd_bluetooth_turning_on_sharp,
+            500L
+        )
     }
 
     private fun setInfiniteAnimatedVectorDrawable(
@@ -61,5 +67,37 @@ class MainActivity : AppCompatActivity() {
             }
         })
         avd?.start()
+    }
+
+    private fun setTwoStatesInfiniteAnimatedVectorDrawable(
+        imageView: ImageView,
+        @DrawableRes avdResource1: Int,
+        @DrawableRes avdResource2: Int,
+        delayBetweenStates: Long
+    ) {
+        val avd1 = AnimatedVectorDrawableCompat.create(this, avdResource1)
+        val avd2 = AnimatedVectorDrawableCompat.create(this, avdResource2)
+
+        imageView.setImageDrawable(avd1)
+
+        avd1?.registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
+            override fun onAnimationEnd(drawable: Drawable?) {
+                imageView.postDelayed({
+                    imageView.setImageDrawable(avd2)
+                    avd2?.start()
+                }, delayBetweenStates)
+            }
+        })
+
+        avd2?.registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
+            override fun onAnimationEnd(drawable: Drawable?) {
+                imageView.postDelayed({
+                    imageView.setImageDrawable(avd1)
+                    avd1?.start()
+                }, delayBetweenStates)
+            }
+        })
+
+        avd1?.start()
     }
 }
