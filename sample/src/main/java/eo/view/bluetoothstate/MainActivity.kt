@@ -46,11 +46,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupTurningOnOffAnimations() {
+        val delayBetweenOnOffStates = 500L
+
+        setTwoStatesInfiniteAnimatedVectorDrawable(
+            roundedTurningOnOffImageView,
+            R.drawable.avd_bluetooth_turning_off_rounded,
+            R.drawable.avd_bluetooth_turning_on_rounded,
+            delayBetweenOnOffStates
+        )
+
         setTwoStatesInfiniteAnimatedVectorDrawable(
             sharpTurningOnOffImageView,
             R.drawable.avd_bluetooth_turning_off_sharp,
             R.drawable.avd_bluetooth_turning_on_sharp,
-            500L
+            delayBetweenOnOffStates
         )
     }
 

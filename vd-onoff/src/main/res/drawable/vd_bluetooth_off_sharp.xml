@@ -8,6 +8,6 @@
     <path
         android:name="bluetooth_icon"
         android:fillColor="#FF000000"
-        android:pathData="@string/bluetooth_path_sharp" />
+        android:pathData="@string/bluetooth_off_path_sharp" />
 
 </vector>

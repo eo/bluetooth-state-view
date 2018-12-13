@@ -1,0 +1,17 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/vd_bluetooth_on_sharp">
+
+    <target android:name="bluetooth_icon">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="@integer/bluetooth_turning_on_off_duration"
+                android:interpolator="@android:interpolator/linear"
+                android:propertyName="pathData"
+                android:valueFrom="@string/bluetooth_on_path_rounded"
+                android:valueTo="@string/bluetooth_off_path_rounded"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+</animated-vector>
