@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/on"
+        android:drawable="@drawable/vd_bluetooth_on_rounded"
+        android:state_checked="true" />
+
+    <item
+        android:id="@+id/off"
+        android:drawable="@drawable/vd_bluetooth_off_rounded" />
+
+    <transition
+        android:drawable="@drawable/avd_bluetooth_turning_off_rounded"
+        android:fromId="@id/on"
+        android:toId="@id/off" />
+
+    <transition
+        android:drawable="@drawable/avd_bluetooth_turning_on_rounded"
+        android:fromId="@id/off"
+        android:toId="@id/on" />
+
+</animated-selector>
