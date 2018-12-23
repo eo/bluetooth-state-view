@@ -54,10 +54,12 @@
         app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/roundedConnectingImageView"
+    <eo.view.bluetoothstate.BluetoothStateView
+        android:id="@+id/roundedConnectingBluetoothState"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:bluetoothState="connecting"
+        app:bluetoothTheme="rounded"
         app:layout_constraintBottom_toTopOf="@id/heightPercent40Guideline"
         app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
         app:layout_constraintHeight_percent="0.2"
@@ -65,10 +67,12 @@
         app:layout_constraintTop_toBottomOf="@id/heightPercent10Guideline"
         app:layout_constraintWidth_percent="0.4" />
 
-    <ImageView
-        android:id="@+id/sharpConnectingImageView"
+    <eo.view.bluetoothstate.BluetoothStateView
+        android:id="@+id/sharpConnectingBluetoothState"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:bluetoothState="connecting"
+        app:bluetoothTheme="sharp"
         app:layout_constraintBottom_toTopOf="@id/heightPercent40Guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2"
@@ -76,10 +80,12 @@
         app:layout_constraintTop_toBottomOf="@id/heightPercent10Guideline"
         app:layout_constraintWidth_percent="0.4" />
 
-    <ImageView
-        android:id="@+id/roundedSearchingImageView"
+    <eo.view.bluetoothstate.BluetoothStateView
+        android:id="@+id/roundedSearchingBluetoothState"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:bluetoothState="searching"
+        app:bluetoothTheme="rounded"
         app:layout_constraintBottom_toTopOf="@id/heightPercent70Guideline"
         app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
         app:layout_constraintHeight_percent="0.2"
@@ -87,10 +93,12 @@
         app:layout_constraintTop_toBottomOf="@id/heightPercent40Guideline"
         app:layout_constraintWidth_percent="0.4" />
 
-    <ImageView
-        android:id="@+id/sharpSearchingImageView"
+    <eo.view.bluetoothstate.BluetoothStateView
+        android:id="@+id/sharpSearchingBluetoothState"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:bluetoothState="searching"
+        app:bluetoothTheme="sharp"
         app:layout_constraintBottom_toTopOf="@id/heightPercent70Guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2"
@@ -98,35 +106,36 @@
         app:layout_constraintTop_toBottomOf="@id/heightPercent40Guideline"
         app:layout_constraintWidth_percent="0.4" />
 
-    <ImageView
-        android:id="@+id/roundedTurningOnOffImageView"
+    <eo.view.bluetoothstate.BluetoothStateView
+        android:id="@+id/roundedTurningOnOffBluetoothState"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
         android:focusable="true"
+        app:bluetoothState="on"
+        app:bluetoothTheme="rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/widthPercent50Guideline"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/heightPercent70Guideline"
-        app:layout_constraintWidth_percent="0.4"
-        app:srcCompat="@drawable/asl_bluetooth_on_off_rounded" />
+        app:layout_constraintWidth_percent="0.4" />
 
-    <ImageView
-        android:id="@+id/sharpTurningOnOffImageView"
+    <eo.view.bluetoothstate.BluetoothStateView
+        android:id="@+id/sharpTurningOnOffBluetoothState"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
         android:focusable="true"
+        app:bluetoothState="on"
+        app:bluetoothTheme="sharp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.2"
         app:layout_constraintStart_toEndOf="@id/widthPercent50Guideline"
         app:layout_constraintTop_toBottomOf="@id/heightPercent70Guideline"
-        app:layout_constraintWidth_percent="0.4"
-        app:srcCompat="@drawable/asl_bluetooth_on_off_sharp" />
-
+        app:layout_constraintWidth_percent="0.4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
