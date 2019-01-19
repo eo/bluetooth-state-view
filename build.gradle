@@ -47,6 +47,9 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.0-beta01'
         classpath deps.kotlinGradlePlugin
+
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
@@ -54,6 +57,13 @@ allprojects {
     repositories {
         google()
         jcenter()
+    }
+}
+
+subprojects {
+    // temporary solution to fix "javadoc: error - Illegal package name"
+    tasks.withType(Javadoc).all {
+        enabled = false
     }
 }
 

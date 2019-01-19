@@ -38,3 +38,29 @@ dependencies {
     androidTestImplementation deps.atsl
     androidTestImplementation deps.espresso
 }
+
+ext {
+    bintrayRepo = 'view'
+    bintrayName = 'bluetoothstate'
+
+    publishedGroupId = 'eo.view'
+    libraryName = 'BluetoothState'
+    artifact = 'bluetoothstate'
+
+    libraryDescription = 'Material design animated Bluetooth state view for Android'
+
+    siteUrl = 'https://github.com/eo/bluetooth-state-view'
+    gitUrl = 'https://github.com/eo/bluetooth-state-view.git'
+
+    libraryVersion = config.versionName
+
+    developerId = 'eo'
+    developerName = 'Erdem Orman'
+    developerEmail = 'ormanerdem@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: '../bintray-upload.gradle'
