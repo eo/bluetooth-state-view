@@ -3,7 +3,40 @@
 
 Material design animated Bluetooth state view for Android
 
+[ ![Download](https://api.bintray.com/packages/eo/view/bluetoothstate/images/download.svg) ](https://bintray.com/eo/view/bluetoothstate/_latestVersion)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://github.com/eo/battery-meter-view/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/minSdkVersion-19-red.svg)](https://developer.android.com/about/dashboards/)
+
+Download
+--------
+```groovy
+dependencies {
+  implementation 'eo.view:bluetoothstate:1.0.0'
+}
+```
+
+You also have the option to download individual animated vector drawables:
+```groovy
+dependencies {
+  implementation 'eo.avd:bluetoothconnecting:1.0.0'
+  implementation 'eo.avd:bluetoothsearching:1.0.0'
+  implementation 'eo.avd:bluetoothturningonoff:1.0.0'
+}
+```
+
+Usage
+-----
+Library contains both `BluetoothStateView` and `BluetoothStateDrawable` classes. Following XML attributes have corresponding class properties.
+
+```xml
+<eo.view.bluetoothstate.BluetoothStateView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:bluetoothAnimateStateChanges="true"
+    app:bluetoothColor="@android:color/black"
+    app:bluetoothTheme="rounded"
+    app:bluetoothState="searching" />
+```
 
 License
 -------
