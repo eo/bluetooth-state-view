@@ -38,6 +38,13 @@ Library contains both `BluetoothStateView` and `BluetoothStateDrawable` classes.
     app:bluetoothState="searching" />
 ```
 
+Themes & Animations
+---------------
+|   | Connecting | Searching | Turning On & Off
+| - | ---------- | --------- | ----------------
+**Rounded** | ![Rounded Connecting](/images/connecting_rounded.gif) | ![Rounded Searching](/images/searching_rounded.gif) | ![Rounded Turning On/Off](/images/turningonoff_rounded.gif)
+**Sharp** | ![Sharp Connecting](/images/connecting_sharp.gif) | ![Sharp Searching](/images/searching_sharp.gif) | ![Sharp Turning On/Off](/images/turningonoff_sharp.gif)
+
 License
 -------
 
