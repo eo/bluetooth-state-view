@@ -60,6 +60,9 @@ class BluetoothStateDrawable(
             updateDrawableForCurrentStateAndTheme()
         }
 
+    /**
+     * Flag to animate state change to ON & OFF
+     */
     override var animateStateChanges: Boolean = true
 
 

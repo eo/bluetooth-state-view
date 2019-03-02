@@ -52,6 +52,9 @@ class BluetoothStateView @JvmOverloads constructor(
             invalidate()
         }
 
+    /**
+     * Flag to animate state change to ON & OFF
+     */
     override var animateStateChanges: Boolean
         get() = bluetoothStateDrawable.animateStateChanges
         set(value) {
