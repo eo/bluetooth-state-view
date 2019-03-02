@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <attr name="bluetoothStateStyle" format="reference" />
+
     <declare-styleable name="BluetoothStateView">
-
-        <attr name="bluetoothTheme" format="enum">
-            <enum name="rounded" value="0" />
-            <enum name="sharp" value="1" />
-        </attr>
-
+        <attr name="bluetoothAnimateStateChanges" format="boolean" />
         <attr name="bluetoothState" format="enum">
             <enum name="off" value="0" />
             <enum name="on" value="1" />
@@ -18,8 +15,10 @@
         </attr>
 
         <attr name="bluetoothColor" format="color" />
-        <attr name="bluetoothAnimateStateChanges" format="boolean" />
-
+        <attr name="bluetoothTheme" format="enum">
+            <enum name="rounded" value="0" />
+            <enum name="sharp" value="1" />
+        </attr>
     </declare-styleable>
 
 </resources>

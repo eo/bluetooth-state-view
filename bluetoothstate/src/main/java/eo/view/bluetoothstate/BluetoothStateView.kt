@@ -12,7 +12,7 @@ import eo.view.bluetoothstate.BluetoothState.Theme
 class BluetoothStateView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
+    defStyleAttr: Int = R.attr.bluetoothStateStyle
 ) : View(context, attrs, defStyleAttr), BluetoothState {
 
     private val bluetoothStateDrawable: BluetoothStateDrawable
@@ -64,7 +64,7 @@ class BluetoothStateView @JvmOverloads constructor(
             attrs,
             R.styleable.BluetoothStateView,
             defStyleAttr,
-            0
+            R.style.Widget_BluetoothState
         )
 
         val themes = Theme.values()

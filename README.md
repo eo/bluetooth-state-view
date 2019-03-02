@@ -45,6 +45,10 @@ Themes & Animations
 **Rounded** | ![Rounded Connecting](/images/connecting_rounded.gif) | ![Rounded Searching](/images/searching_rounded.gif) | ![Rounded Turning On/Off](/images/turningonoff_rounded.gif)
 **Sharp** | ![Sharp Connecting](/images/connecting_sharp.gif) | ![Sharp Searching](/images/searching_sharp.gif) | ![Sharp Turning On/Off](/images/turningonoff_sharp.gif)
 
+Style
+-----
+Bluetooth state view is styleable using `bluetoothStateStyle` in your theme. `Widget.BluetoothState` can be used as a base style.
+
 Sample
 ------
 Download sample app under releases to play with the library
