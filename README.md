@@ -11,16 +11,16 @@ Download
 --------
 ```groovy
 dependencies {
-  implementation 'eo.view:bluetoothstate:1.0.0'
+  implementation 'eo.view:bluetoothstate:1.1.0'
 }
 ```
 
 You also have the option to download individual animated vector drawables:
 ```groovy
 dependencies {
-  implementation 'eo.avd:bluetoothconnecting:1.0.0'
-  implementation 'eo.avd:bluetoothsearching:1.0.0'
-  implementation 'eo.avd:bluetoothturningonoff:1.0.0'
+  implementation 'eo.avd:bluetoothconnecting:1.1.0'
+  implementation 'eo.avd:bluetoothsearching:1.1.0'
+  implementation 'eo.avd:bluetoothturningonoff:1.1.0'
 }
 ```
 
