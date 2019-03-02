@@ -1,7 +1,12 @@
 package eo.view.bluetoothstate.util
 
 import android.graphics.Rect
+import android.graphics.drawable.Animatable2
+import android.graphics.drawable.AnimatedVectorDrawable
 import android.graphics.drawable.Drawable
+import android.os.Build
+import androidx.vectordrawable.graphics.drawable.Animatable2Compat
+import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 
 internal fun Drawable.scaleToFit(destRect: Rect, padding: Rect) {
     if (destRect.isEmpty || destRect.height() == 0) {
@@ -31,4 +36,34 @@ internal fun Drawable.scaleToFit(destRect: Rect, padding: Rect) {
         drawableOffsetX + drawableWidth,
         drawableOffsetY + drawableHeight
     )
+}
+
+internal fun Drawable.startInfiniteAvdAnimation() {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && this is AnimatedVectorDrawable) {
+        registerAnimationCallback(object : Animatable2.AnimationCallback() {
+            override fun onAnimationEnd(drawable: Drawable?) {
+                scheduleSelf({
+                    start()
+                }, 0L)
+            }
+        })
+        start()
+    } else if (this is AnimatedVectorDrawableCompat) {
+        registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
+            override fun onAnimationEnd(drawable: Drawable?) {
+                scheduleSelf({
+                    start()
+                }, 0L)
+            }
+        })
+        start()
+    }
+}
+
+internal fun Drawable.startOneShotAvdAnimation() {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && this is AnimatedVectorDrawable) {
+        start()
+    } else if (this is AnimatedVectorDrawableCompat) {
+        start()
+    }
 }

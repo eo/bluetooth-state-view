@@ -1,24 +1,36 @@
 package eo.view.bluetoothstate.util
 
 import android.content.Context
+import android.graphics.drawable.Drawable
+import android.os.Build
 import android.util.TypedValue
 import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
-import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 
-internal fun Context.createVectorDrawable(@DrawableRes vdRes: Int): VectorDrawableCompat {
-    val vd = VectorDrawableCompat.create(resources, vdRes, theme)
 
-    return vd ?: throw IllegalArgumentException("Cannot create vector drawable!")
+internal fun Context.getDrawableCompat(@DrawableRes drawableRes: Int): Drawable {
+    val drawable = AppCompatResources.getDrawable(this, drawableRes)
+
+    return drawable ?: throw IllegalArgumentException("Cannot get drawable!")
 }
 
-internal fun Context.createAnimatedVectorDrawable(@DrawableRes avdRes: Int): AnimatedVectorDrawableCompat {
-    val avd = AnimatedVectorDrawableCompat.create(this, avdRes)
+/**
+ * AnimatedVectorDrawable in API 21 & 22 does not have registerAnimationCallback
+ * therefore AnimatedVectorDrawableCompat is forced on those API versions
+ */
+internal fun Context.getAvdWithAnimationCallback(@DrawableRes drawableRes: Int): Drawable {
+    val drawable = when (Build.VERSION.SDK_INT) {
+        Build.VERSION_CODES.LOLLIPOP,
+        Build.VERSION_CODES.M -> AnimatedVectorDrawableCompat.create(this, drawableRes)
+        else -> AppCompatResources.getDrawable(this, drawableRes)
+    }
 
-    return avd ?: throw IllegalArgumentException("Cannot create animated vector drawable!")
+    return drawable
+        ?: throw IllegalArgumentException("Cannot get drawable with animation callback!")
 }
 
 @ColorInt

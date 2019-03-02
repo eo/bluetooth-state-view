@@ -13,10 +13,7 @@ import androidx.core.graphics.drawable.DrawableCompat
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
 import eo.view.bluetoothstate.BluetoothState.State
 import eo.view.bluetoothstate.BluetoothState.Theme
-import eo.view.bluetoothstate.util.createAnimatedVectorDrawable
-import eo.view.bluetoothstate.util.createVectorDrawable
-import eo.view.bluetoothstate.util.getColorFromAttr
-import eo.view.bluetoothstate.util.scaleToFit
+import eo.view.bluetoothstate.util.*
 
 
 class BluetoothStateDrawable(
@@ -67,7 +64,7 @@ class BluetoothStateDrawable(
 
 
     init {
-        drawable = context.createVectorDrawable(
+        drawable = context.getDrawableCompat(
             if (theme == Theme.ROUNDED) {
                 R.drawable.vd_bluetooth_on_rounded
             } else {
@@ -208,7 +205,7 @@ class BluetoothStateDrawable(
     }
 
     private fun setVectorDrawable(@DrawableRes vdRes: Int) {
-        val vd = context.createVectorDrawable(vdRes)
+        val vd = context.getDrawableCompat(vdRes)
         vd.scaleToFit(bounds, padding)
 
         replaceDrawable(vd)
@@ -216,29 +213,20 @@ class BluetoothStateDrawable(
     }
 
     private fun setOneShotAnimatedVectorDrawable(@DrawableRes avdRes: Int) {
-        val avd = context.createAnimatedVectorDrawable(avdRes)
+        val avd = context.getDrawableCompat(avdRes)
         avd.scaleToFit(bounds, padding)
 
         replaceDrawable(avd)
-        avd.start()
+        avd.startOneShotAvdAnimation()
         invalidateSelf()
     }
 
     private fun setInfiniteAnimatedVectorDrawable(@DrawableRes avdRes: Int) {
-        val avd = context.createAnimatedVectorDrawable(avdRes)
+        val avd = context.getAvdWithAnimationCallback(avdRes)
         avd.scaleToFit(bounds, padding)
 
-        avd.registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
-            override fun onAnimationEnd(drawable: Drawable?) {
-                // TODO: check if drawable is still valid
-                scheduleSelf({
-                    avd.start()
-                }, 0L)
-            }
-        })
-
         replaceDrawable(avd)
-        avd.start()
+        avd.startInfiniteAvdAnimation()
         invalidateSelf()
     }
 
