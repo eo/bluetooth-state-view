@@ -60,6 +60,16 @@ internal fun Drawable.startInfiniteAvdAnimation() {
     }
 }
 
+internal fun Drawable.stopAvdAnimation() {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && this is AnimatedVectorDrawable) {
+        clearAnimationCallbacks()
+        stop()
+    } else if (this is AnimatedVectorDrawableCompat) {
+        clearAnimationCallbacks()
+        stop()
+    }
+}
+
 internal fun Drawable.startOneShotAvdAnimation() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && this is AnimatedVectorDrawable) {
         start()

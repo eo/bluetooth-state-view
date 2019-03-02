@@ -237,6 +237,7 @@ class BluetoothStateDrawable(
         DrawableCompat.setTint(newDrawable, color)
         newDrawable.alpha = drawable.alpha
 
+        drawable.stopAvdAnimation()
         drawable.callback = null
         drawable = newDrawable
         drawable.callback = drawableCallback
