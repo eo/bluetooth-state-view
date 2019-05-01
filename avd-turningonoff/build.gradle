@@ -1,40 +1,5 @@
 apply plugin: 'com.android.library'
 
-android {
-    compileSdkVersion config.compileSdk
-
-    defaultConfig {
-        minSdkVersion config.minSdk
-        targetSdkVersion config.targetSdk
-
-        versionCode config.versionCode
-        versionName config.versionName
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        vectorDrawables.useSupportLibrary = true
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-}
-
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation project(':vd-onoff')
-
-    implementation deps.appcompat
-
-    testImplementation deps.junit
-    androidTestImplementation deps.atsl
-    androidTestImplementation deps.espresso
-}
-
 ext {
     bintrayRepo = 'avd'
     bintrayName = 'bluetoothturningonoff'
@@ -57,6 +22,43 @@ ext {
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion config.compileSdk
+
+    defaultConfig {
+        minSdkVersion config.minSdk
+        targetSdkVersion config.targetSdk
+
+        versionCode config.versionCode
+        versionName config.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+
+        archivesBaseName = bintrayName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':vd-onoff')
+
+    implementation deps.appcompat
+
+    testImplementation deps.junit
+    androidTestImplementation deps.atsl
+    androidTestImplementation deps.espresso
 }
 
 apply from: '../bintray-upload.gradle'
