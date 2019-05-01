@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'vd'
+    bintrayName = 'bluetooth'
+
+    publishedGroupId = 'eo.vd'
+    libraryName = 'Bluetooth'
+    artifact = 'bluetooth'
+
+    libraryDescription = 'Material design Bluetooth vector drawable for Android'
+
+    siteUrl = 'https://github.com/eo/bluetooth-state-view'
+    gitUrl = 'https://github.com/eo/bluetooth-state-view.git'
+
+    libraryVersion = config.versionName
+
+    developerId = 'eo'
+    developerName = 'Erdem Orman'
+    developerEmail = 'ormanerdem@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion config.compileSdk
 
@@ -13,6 +37,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         vectorDrawables.useSupportLibrary = true
+
+        archivesBaseName = bintrayName
     }
 
     buildTypes {
@@ -32,3 +58,5 @@ dependencies {
     androidTestImplementation deps.atsl
     androidTestImplementation deps.espresso
 }
+
+apply from: '../bintray-upload.gradle'
